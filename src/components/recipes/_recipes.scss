@@ -1,0 +1,23 @@
+.recipes_wrap {
+  background-color: rgb(6, 58, 10);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5vh;
+  grid-row-gap: 100vh;
+  padding: 15vh;
+  box-sizing: border-box;
+
+  .recipe_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: rgb(231, 231, 231);
+    .recipe {
+    }
+  }
+  .active {
+    background-color: bisque;
+  }
+}
