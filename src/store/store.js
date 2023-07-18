@@ -1216,7 +1216,8 @@ export const useStore = create((set, get) => ({
     },
   ],
   selected: [],
-
+  currentRecipe: null,
+  setCurrentRecipe: (recipe) => set(() => ({ currentRecipe: recipe })),
   selectedUpdate: (newSelected) => set(() => ({ selected: newSelected })),
   selectedDelete: () =>
     set(() => {

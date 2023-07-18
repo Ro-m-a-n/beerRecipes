@@ -1,3 +1,4 @@
+@import "../../scss/global/mixins";
 .recipes_wrap {
   background-color: rgb(6, 58, 10);
   display: grid;
@@ -5,16 +6,22 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 5vh;
   grid-row-gap: 100vh;
-  padding: 15vh;
+  padding: 10vh;
   box-sizing: border-box;
 
   .recipe_wrap {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    height: 70vh;
+    height: 80vh;
     background-color: rgb(231, 231, 231);
+    text-align: center;
+
     .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include bottleImage(65vh);
     }
   }
   .active {

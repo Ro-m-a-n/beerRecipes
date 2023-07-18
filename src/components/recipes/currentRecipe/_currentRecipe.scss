@@ -1,0 +1,103 @@
+@import "../../../scss/global/mixins";
+$primary-color: #ff9800;
+$secondary-color: #4caf50;
+$background-color: #f7f7f7;
+
+.currentRecipe_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff990063;
+  display: flex;
+  justify-content: center;
+
+  .currentRecipe {
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    padding: 30px;
+    border-radius: 5px;
+    width: 85vw;
+    display: flex;
+    position: relative;
+    @include scrollBar(black, white, red);
+
+    .leftSideRecipe {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 200px;
+      text-align: center;
+      @include bottleImage(70vh);
+    }
+    .rightSideRecipe {
+      margin-left: 30px;
+    }
+    .closeButton {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 20px;
+      height: auto;
+    }
+  }
+}
+
+// Table styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: $background-color;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  th,
+  td {
+    width: 33%;
+    padding: 3px 10px;
+    text-align: left;
+  }
+
+  thead {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  /* Row hover effect */
+  tbody tr:hover {
+    background-color: #f0f0f0;
+
+    transition: background-color 0.2s ease;
+  }
+
+  /* Table borders */
+  th,
+  td {
+    border: 1px solid #e0e0e0;
+  }
+
+  /* Remove left border for the first column */
+  td:first-child,
+  th:first-child {
+    border-left: none;
+  }
+
+  /* Remove right border for the last column */
+  td:last-child,
+  th:last-child {
+    border-right: none;
+  }
+}

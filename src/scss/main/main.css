@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .recipes_wrap {
   background-color: rgb(6, 58, 10);
   display: grid;
@@ -5,15 +6,27 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 5vh;
   grid-row-gap: 100vh;
-  padding: 15vh;
+  padding: 10vh;
   box-sizing: border-box;
 }
 .recipes_wrap .recipe_wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  height: 70vh;
+  height: 80vh;
   background-color: rgb(231, 231, 231);
+  text-align: center;
+}
+.recipes_wrap .recipe_wrap .recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipes_wrap .recipe_wrap .recipe img {
+  height: 65vh;
+  width: auto;
+  min-width: 120px;
+  max-width: 200px;
 }
 .recipes_wrap .active {
   background-color: bisque;
@@ -26,4 +39,181 @@
   color: white;
   height: 10vh;
   width: 7vh;
+}
+
+.currentRecipe_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 153, 0, 0.3882352941);
+  display: flex;
+  justify-content: center;
+}
+.currentRecipe_wrap .currentRecipe {
+  height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  padding: 30px;
+  border-radius: 5px;
+  width: 85vw;
+  display: flex;
+  position: relative;
+}
+.currentRecipe_wrap .currentRecipe::-webkit-scrollbar {
+  width: 8px;
+}
+.currentRecipe_wrap .currentRecipe::-webkit-scrollbar-track {
+  margin: 5px 0;
+  background-color: black;
+  border-radius: 4px;
+}
+.currentRecipe_wrap .currentRecipe::-webkit-scrollbar-thumb {
+  background-color: white;
+  height: 100px;
+  border-radius: 4px;
+}
+.currentRecipe_wrap .currentRecipe::-webkit-scrollbar-thumb:hover {
+  background-color: red;
+}
+.currentRecipe_wrap .currentRecipe .leftSideRecipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 200px;
+  text-align: center;
+}
+.currentRecipe_wrap .currentRecipe .leftSideRecipe img {
+  height: 70vh;
+  width: auto;
+  min-width: 120px;
+  max-width: 200px;
+}
+.currentRecipe_wrap .currentRecipe .rightSideRecipe {
+  margin-left: 30px;
+}
+.currentRecipe_wrap .currentRecipe .closeButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Row hover effect */
+  /* Table borders */
+  /* Remove left border for the first column */
+  /* Remove right border for the last column */
+}
+table th,
+table td {
+  width: 33%;
+  padding: 3px 10px;
+  text-align: left;
+}
+table thead {
+  background-color: #ff9800;
+  color: #fff;
+}
+table th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+table tbody tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+table th,
+table td {
+  border: 1px solid #e0e0e0;
+}
+table td:first-child,
+table th:first-child {
+  border-left: none;
+}
+table td:last-child,
+table th:last-child {
+  border-right: none;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }/*# sourceMappingURL=main.css.map */

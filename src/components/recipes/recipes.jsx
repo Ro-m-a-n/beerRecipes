@@ -3,6 +3,7 @@ export const Recipes = () => {
   const recipes = useStore((state) => state.recipes);
   const selected = useStore((state) => state.selected);
   const selectedUpdate = useStore((state) => state.selectedUpdate);
+  const setCurrentRecipe = useStore((state) => state.setCurrentRecipe);
   const first15recipes = recipes.slice(0, 15);
   let selectedClass = "";
 
@@ -26,10 +27,17 @@ export const Recipes = () => {
     return (
       <div
         className={`recipe_wrap ${selectedClass}`}
+        onClick={() => {
+          setCurrentRecipe(item);
+        }}
         onContextMenu={(event) => handleClick(event, item.id)}
         key={item.id}
       >
-        <div className="recipe">{item.name}</div>
+        <div className="recipe">
+          <img src={item.image_url} />
+          <header>{item.name}</header>
+          <p>{item.tagline}</p>
+        </div>
       </div>
     );
   });
