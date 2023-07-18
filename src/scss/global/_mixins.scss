@@ -1,29 +1,34 @@
-@import "./color";
-
-@mixin scrollBar($color, $color2, $color3) {
+@import "./colors";
+@mixin elipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin scrollBar($col, $col2, $col3) {
   &::-webkit-scrollbar {
     width: 8px;
   }
   &::-webkit-scrollbar-track {
     margin: 5px 0;
-    background-color: $color;
+    background-color: $col;
     border-radius: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $color2;
+    background-color: $col2;
     height: 100px;
     border-radius: 4px;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background-color: $color3;
+    background-color: $col3;
   }
 }
 
 @mixin bottleImage($height) {
   img {
     height: $height;
+    min-height: 350px;
     width: auto;
     min-width: 120px;
-    max-width: 200px;
+    max-width: 100%;
   }
 }

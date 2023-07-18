@@ -13,7 +13,7 @@ export const CurrentRecipe = () => {
           <p>{data.tagline}</p>
         </div>
         <div className="rightSideRecipe">
-          {" "}
+          <h3>Description</h3>
           <p>{data.description}</p>
           <h3>Food Pairing</h3>
           <ul>
@@ -23,8 +23,10 @@ export const CurrentRecipe = () => {
           </ul>
           <MethodTable data={data.method} />
           <IngredientsTable data={data.ingredients} />
-          <p>Brewers Tips: {data.brewers_tips}</p>
-          <p>Contributed By: {data.contributed_by}</p>
+          <h3>Brewers Tips</h3>
+          <p> {data.brewers_tips}</p>
+          <h3>Contributed By</h3>
+          <p> {data.contributed_by}</p>
         </div>
         <MdOutlineClose
           className="closeButton"

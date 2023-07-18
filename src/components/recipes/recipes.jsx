@@ -27,16 +27,18 @@ export const Recipes = () => {
     return (
       <div
         className={`recipe_wrap ${selectedClass}`}
+        key={item.id}
         onClick={() => {
           setCurrentRecipe(item);
         }}
         onContextMenu={(event) => handleClick(event, item.id)}
-        key={item.id}
       >
         <div className="recipe">
           <img src={item.image_url} />
-          <header>{item.name}</header>
-          <p>{item.tagline}</p>
+          <div className="beerName">
+            <header>{item.name}</header>
+            <p>{item.tagline}</p>
+          </div>
         </div>
       </div>
     );

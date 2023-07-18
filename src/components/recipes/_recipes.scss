@@ -1,6 +1,7 @@
 @import "../../scss/global/mixins";
+@import "../../scss/global/colors";
 .recipes_wrap {
-  background-color: rgb(6, 58, 10);
+  background-color: $color1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -14,17 +15,49 @@
     align-items: flex-start;
     justify-content: center;
     height: 80vh;
-    background-color: rgb(231, 231, 231);
+    min-height: 475px;
+    max-width: 220px;
+    min-width: 150px;
+    margin: 5px;
+    padding-top: 15px;
+    background-color: $color3;
     text-align: center;
-
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      transition: 0.3s;
+      scale: 1.03;
+    }
     .recipe {
+      width: 100%;
+      min-height: 400px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      @include bottleImage(65vh);
+      .beerName {
+        background-color: $color5;
+        margin-top: 15px;
+        width: 100%;
+        height: 300px;
+        padding: 0 5px;
+        border-top: 5px solid black;
+        overflow: hidden;
+
+        p {
+          @include elipsis;
+        }
+        header {
+          margin-top: 10px;
+          font-size: large;
+          font-weight: 500;
+        }
+      }
+
+      @include bottleImage(60vh);
     }
   }
   .active {
-    background-color: bisque;
+    background-color: $color4;
   }
 }

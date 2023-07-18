@@ -1,12 +1,10 @@
 @import "../../../scss/global/mixins";
-$primary-color: #ff9800;
-$secondary-color: #4caf50;
-$background-color: #f7f7f7;
+@import "../../../scss/global/colors";
 
 .currentRecipe_wrap {
   width: 100vw;
   height: 100vh;
-  background-color: #ff990063;
+  background-color: $color1;
   display: flex;
   justify-content: center;
 
@@ -14,13 +12,14 @@ $background-color: #f7f7f7;
     height: 100vh;
     overflow-y: scroll;
     box-sizing: border-box;
-    background-color: antiquewhite;
-    padding: 30px;
+    background-color: $color3;
+    padding: 3vw;
     border-radius: 5px;
     width: 85vw;
     display: flex;
+    justify-content: center;
     position: relative;
-    @include scrollBar(black, white, red);
+    @include scrollBar($color3, $color2, $color2);
 
     .leftSideRecipe {
       display: flex;
@@ -31,14 +30,18 @@ $background-color: #f7f7f7;
       @include bottleImage(70vh);
     }
     .rightSideRecipe {
-      margin-left: 30px;
+      margin-left: 3vw;
+      ul {
+        margin: 0;
+      }
     }
     .closeButton {
       position: absolute;
       right: 10px;
       top: 10px;
-      width: 20px;
+      width: 30px;
       height: auto;
+      cursor: pointer;
     }
   }
 }
@@ -48,9 +51,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background-color: $background-color;
+  background-color: $color2;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -63,8 +64,8 @@ table {
   }
 
   thead {
-    background-color: $primary-color;
-    color: #fff;
+    background-color: $color1;
+    color: $color3;
   }
 
   th {
@@ -73,7 +74,7 @@ table {
   }
 
   tbody tr:nth-child(odd) {
-    background-color: #fff;
+    background-color: $color2;
   }
 
   /* Row hover effect */
