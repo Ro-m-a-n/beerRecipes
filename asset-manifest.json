@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/beerRecipes/static/css/main.0f7cd4be.css",
+    "main.js": "/beerRecipes/static/js/main.b09faa97.js",
+    "static/js/787.8462ef12.chunk.js": "/beerRecipes/static/js/787.8462ef12.chunk.js",
+    "index.html": "/beerRecipes/index.html",
+    "main.0f7cd4be.css.map": "/beerRecipes/static/css/main.0f7cd4be.css.map",
+    "main.b09faa97.js.map": "/beerRecipes/static/js/main.b09faa97.js.map",
+    "787.8462ef12.chunk.js.map": "/beerRecipes/static/js/787.8462ef12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f7cd4be.css",
+    "static/js/main.b09faa97.js"
+  ]
+}
