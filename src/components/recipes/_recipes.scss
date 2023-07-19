@@ -1,6 +1,7 @@
 @import "../../scss/global/mixins";
 @import "../../scss/global/colors";
 .recipes_wrap {
+  height: 100%;
   background-color: $color1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
